@@ -1,0 +1,17 @@
+.result-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.result-container:hover {
+    background-color: #f1f1f1;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

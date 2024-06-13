@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold text-center mb-8">Web Scraper</h1>
+            <form id="scraper-form" class="space-y-4">
+                <div class="form-group">
+                    <label for="urls" class="block text-gray-700">Enter URLs separated by commas:</label>
+                    <textarea id="urls" name="urls" class="form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="output-format" class="block text-gray-700">Select Output Format:</label>
+                    <select id="output-format" name="output-format" class="form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
+                        <option value="html">HTML</option>
+                        <option value="json">JSON</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-full py-2 mt-4 bg-blue-500 text-white rounded-md hover:bg-blue-700">Scrape</button>
+            </form>
+            <div id="results" class="mt-8"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
